@@ -14,7 +14,12 @@ print(f"Servidor escuchando en el puerto {puerto}")
 while True:
     datos, origen = servidor.recvfrom(1024)
 
-    mensaje = datos.decode("utf-8")
-    print(f"Origen: {origen}")
-    print(f"Mensaje: {mensaje}")
+    probabilidad = random.randint(0, 1)
+
+    if probabilidad == 0:
+        print("Simulando paquete perdido")
+    else :
+        mensaje = datos.decode("utf-8")
+        print(f"Origen: {origen}")
+        print(f"Mensaje: {mensaje}")
 
