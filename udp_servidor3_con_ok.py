@@ -21,7 +21,7 @@ while True:
     else :
         mensaje = datos.decode("utf-8") 
         okey = "OK"
-        confirmacion = servidor.sendto(okey.encode(), (origen, puerto))
+        confirmacion = servidor.sendto(okey.encode(), origen)
         print(f"Origen: {origen}")
         print(f"Mensaje: {mensaje}")
 
